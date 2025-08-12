@@ -2,16 +2,23 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python:Streamlit",
+            "name": "Streamlit (Parse Vision)",
             "type": "debugpy",
             "request": "launch",
+            "program": "${workspaceFolder}/index.py",
             "module": "streamlit",
             "args": [
                 "run",
-                "${file}",
+                "index.py",
                 "--server.port",
                 "2000"
-            ]
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
         }
     ]
 }
